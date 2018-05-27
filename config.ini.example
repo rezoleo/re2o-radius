@@ -1,0 +1,8 @@
+[Default]
+DEFAULT_NAME = test_ip_mac
+DEFAULT_TYPE = bitmap:ip,mac
+URL = https://url.to.re2o.fr/
+DHCP_GENERATION = ['adherent']
+ZONE_MASTER_IP = 10.7.0.0
+USERNAME = username
+PASSWORD = password
