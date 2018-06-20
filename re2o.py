@@ -1,8 +1,7 @@
 # encoding=utf8
 
-import socket
-
 import requests
+from logger import logger
 
 from config import Config
 
@@ -30,7 +29,12 @@ class Re2o:
             self.resp_co = self.session.post(login_url, data=self.login_data, headers=dict(referer=login_url))
         except Exception as err:
             self.errors.append(err)
-            print(self.errors)  # TODO Handle errors
+            logger.error(self.errors)
+              # TODO Handle errors
+              # Raise une ConnectionException si le login est faux
+              # (self.session.cookies['sessionid'] renvoie une KeyError)
+              # ou si re2o/Rio ne répond plus.
+              # Cette exception sera catch dans le main.py, qui renverra RadiusResponse.send(true)
         return
 
     def check_mac(self, mac_search):

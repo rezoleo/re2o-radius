@@ -13,6 +13,7 @@ class Config(configparser.ConfigParser):
         # '/usr/local/etc/re2o/config.ini',
         '/etc/re2o/config.ini',
         '/etc/raddb/scripts/re2o-radius/config.ini',
+        './config.ini'
     ]
 
     def __init__(self):
