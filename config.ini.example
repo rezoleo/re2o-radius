@@ -6,3 +6,4 @@ DHCP_GENERATION = ['adherent']
 ZONE_MASTER_IP = 10.7.0.0
 USERNAME = username
 PASSWORD = password
+LOG_PATH = /var/log/radius/re2o-radius.log
